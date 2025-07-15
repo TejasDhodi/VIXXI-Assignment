@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Ancizar Sans", sans-serif;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.top_navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+
+    width: 20px;
+    height: 20px;
+
+    .line {
+      height: 2px;
+      width: 20px;
+      background-color: #fff;
+    }
+  }
+
+  .hamBurgerItems {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    max-width: 450px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    transform: translate(-100%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all .3s ease-out;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-y: auto;
+    scrollbar-gutter: stable both-edges;
+    padding: 25px 40px;
+
+    & * {
+      color: #000;
+    }
+
+    &.active {
+      transform: translate(0);
+    }
+
+    .menuItems {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: start;
+
+      .menuList {
+        color: #121212;
+        font-weight: 600;
+        position: relative;
+        text-transform: uppercase;
+        width: 100%;
+        &.hasContent a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .content {
+          padding-left: 20px;
+          opacity: 0;
+          overflow: hidden;
+          max-height: 0;
+          transition: 300ms ease-in-out;
+
+          &.active {
+            max-height: 1000px;
+            opacity: 1;
+          }
+
+          li {
+            margin-block: 10px;
+            font-weight: normal;
+            font-size: 14px;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    .close_btn, #searchBar {
+      text-align:left;
+      background-color: transparent;
+      border: 0;
+      padding: 12px 12px 10px 0px;
+      color: #121212;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .close_btn {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .searchBar_container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #121212;
+    }
+    #searchBar {
+      position: relative;
+      width: 100%;  
+      &:focus-visible {
+        outline: 0;
+      }
+      &::after {
+        content: "+";
+        position: absolute;
+        right: 0;
+      }
+    }
+    #searchBar::placeholder {
+      color: #121212;
+      font-weight: bold;
+    }
+  }
+}
