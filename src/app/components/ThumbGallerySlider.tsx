@@ -1,69 +1,68 @@
-// components/ThumbGallerySlider.tsx
+import React, { useState, useEffect, useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import firstSliders from '@/app/data/firstSlides.json';
 
-'use client';
+function ThumbGallerySlider() {
+  const sliderRef1 = useRef(null);
+  const sliderRef2 = useRef(null);
 
-import React, { useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Thumbs } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
-import Image from 'next/image';
+  const [nav1, setNav1] = useState(null);
+  const [nav2, setNav2] = useState(null);
 
-const images = [
-  '/images/img1.jpg',
-  '/images/img2.jpg',
-  '/images/img3.jpg',
-  '/images/img4.jpg',
-  '/images/img5.jpg',
-];
+  useEffect(() => {
+    setNav1(sliderRef1.current);
+    setNav2(sliderRef2.current);
+  }, []);
 
+  const slides = [1, 2, 3, 4, 5, 6];
 
-const ThumbGallerySlider = () => {
-  const [thumbsSwiper, setThumbsSwiper] = React.useState<any>(null);
+  const mainSliderSettings = {
+    asNavFor: nav2,
+    ref: sliderRef1,
+    centerMode: true,
+    centerPadding: "0px",
+    slidesToShow: 1,
+    swipeToSlide: true,
+    focusOnSelect: true,
+  };
+
+  const thumbSliderSettings = {
+    asNavFor: nav1,
+    ref: sliderRef2,
+    centerMode: true,
+    centerPadding: "40px",
+    slidesToShow: 3,
+    swipeToSlide: true,
+    focusOnSelect: true,
+  };
 
   return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {/* Main Swiper */}
-      <Swiper
-        loop={true}
-        spaceBetween={10}
-        navigation={true}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[Navigation, Thumbs]}
-        className="w-[80%] h-[400px]"
-      >
-        {images.map((src, idx) => (
-          <SwiperSlide key={idx}>
-            <h4>{src}</h4>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className="slider-container">
+      <h2>Slider Syncing (AsNavFor)</h2>
 
-      {/* Thumbnail Swiper */}
-      <Swiper
-          onSwiper={setThumbsSwiper}
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={1}
-            centeredSlides={true}        // ✅ Centered mode
-            watchSlidesProgress={true}
-            modules={[Thumbs]}
-            className="w-[80%] h-[100px]"
-      >
-        {images.map((src, idx) => (
-          <SwiperSlide key={idx}>
-            <Image
-              src={src}
-              alt={`Thumb ${idx + 1}`}
-              width={100}
-              height={100}
-              className="object-cover border cursor-pointer"
-            />
-          </SwiperSlide>
+      <h4>First Slider</h4>
+      <Slider {...mainSliderSettings}>
+        {firstSliders.map(({content, detail}) => (
+            <div className="slider_content" key={content}>
+              <h2>&quot;{detail}&quot;</h2>
+              <p>{content}</p>
+            </div>
         ))}
-      </Swiper>
+      </Slider>
+
+      <h4>Second Slider</h4>
+      <Slider {...thumbSliderSettings}>
+        {slides.map((num) => (
+          <div key={num}>
+            <img src="/images/carouselimg.svg" alt={`Thumb ${num}`} />
+            <h3>{num}</h3>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }
- export default ThumbGallerySlider
+
+export default ThumbGallerySlider;

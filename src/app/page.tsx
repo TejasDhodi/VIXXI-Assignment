@@ -51,7 +51,7 @@ export default function Home() {
         </section>
 
         <section className="shortDescription">
-          <h1>Every piece is made from 925 Sterling Silver, designed in London and hallmarked at the Goldsmiths' Assay Office</h1>
+          <h1>Every piece is made from 925 Sterling Silver, designed in London and hallmarked at the Goldsmiths&apos; Assay Office</h1>
           <img src="https://www.sergedenimes.com/cdn/shop/files/Hallmark_24.svg?v=1707316242&width=160" alt="" className="hallmark"/>
           <video
             autoPlay

@@ -279,6 +279,33 @@ header {
   width: 100%;
 }
 
-.swiper-slide-thumb-active {
+.swiper-slide-active {
   background-color: red;
+}
+
+/* Swiper css */
+
+.slider-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.slider-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slick-slide.slick-active.slick-center {
+  /* background: red; */
+}
+
+.slick-prev {
+
+}
+.slider_content {
+  display: flex !important;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
