@@ -25,6 +25,19 @@ export default function Home() {
     slidesToShow: 5,
     swipeToSlide: true,
     focusOnSelect: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+
+    responsive: [
+      {
+        breakpoint: 900, 
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "70px",
+          autoplay: false,
+        },
+      },
+    ]
   };
 
   useEffect(() => {
@@ -79,7 +92,7 @@ export default function Home() {
             poster="https://www.sergedenimes.com/cdn/shop/files/preview_images/93170c1e79144e81b325ed9dbae4d7da.thumbnail.0000000000_1200x.jpg?v=1734372161"
           >
             <source
-              src="https://www.sergedenimes.com/cdn/shop/videos/c/vp/93170c1e79144e81b325ed9dbae4d7da/93170c1e79144e81b325ed9dbae4d7da.SD-480p-0.9Mbps-39770512.mp4?v=0"
+              src={isMobile ? "https://www.sergedenimes.com/cdn/shop/videos/c/vp/bd7b46223dfd4b93b3d3e24f8b54b71a/bd7b46223dfd4b93b3d3e24f8b54b71a.HD-720p-1.6Mbps-39770511.mp4?v=0" : "https://www.sergedenimes.com/cdn/shop/videos/c/vp/93170c1e79144e81b325ed9dbae4d7da/93170c1e79144e81b325ed9dbae4d7da.SD-480p-0.9Mbps-39770512.mp4?v=0"}
               type="video/mp4"
             />
             <img

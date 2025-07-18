@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap");
 
 * {
   margin: 0;
@@ -25,11 +25,22 @@ header {
   z-index: 99;
 }
 
+header .topHead {
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 10px;
+  background-color: #000;
+  text-transform: uppercase;
+}
+
 .top_navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 20px;
+  padding-block: 10px;
 }
 
 .top_navbar .hamburger {
@@ -39,12 +50,6 @@ header {
   align-items: center;
   width: 20px;
   height: 20px;
-}
-
-.top_navbar .hamburger .line {
-  height: 2px;
-  width: 20px;
-  background-color: #fff;
 }
 
 .top_navbar .hamBurgerItems {
@@ -67,6 +72,7 @@ header {
   overflow-y: auto;
   scrollbar-gutter: stable both-edges;
   padding: 25px 40px;
+  z-index: 100;
 }
 
 .top_navbar .hamBurgerItems * {
@@ -161,6 +167,29 @@ header {
   font-weight: bold;
 }
 
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navRight img {
+  cursor: pointer;
+}
+
+header.showBg .top_navbar {
+  background-color: #fff;
+  box-shadow: 0 0 15px #00000030;
+}
+
+header.showBg .bottom_navbar {
+  background-color: #fff;
+}
+
+header.showBg * img path {
+  fill: #fff;
+}
+
 #heroSection,
 #coreCollections,
 #perl {
@@ -244,6 +273,21 @@ header {
   height: 100%;
   position: absolute;
   top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card .imageContainer img.first {
+  z-index: 1;
+}
+
+.card .imageContainer img.sec {
+  z-index: 2;
+  opacity: 0;
+}
+
+.card .imageContainer:hover img.sec {
+  opacity: 1;
 }
 
 .card .title {
@@ -297,14 +341,18 @@ header {
   background-color: red;
 }
 
-/* Swiper css */
-
+.slider-container {
+  background-color: rgb(243, 243, 243);
+  padding-block: 30px 25px;
+}
 .slider-container .brandText {
   max-width: 406px;
   margin: 0 auto;
-
 }
 
+.slider-container .brandLogo {
+  margin-block: 40px;
+}
 
 .slider-container .brandText .slick-prev,
 .slider-container .brandText .slick-next {
@@ -321,14 +369,14 @@ header {
 }
 
 .slider-container .brandText .slick-prev::before {
-  content: url('/images/prevArrow.svg');
+  content: url("/images/prevArrow.svg");
   display: block;
   width: 100%;
   height: 100%;
 }
 
 .slider-container .brandText .slick-next::before {
-  content: url('/images/nextArrow.svg');
+  content: url("/images/nextArrow.svg");
   display: block;
   height: 100%;
   width: 100%;
@@ -344,7 +392,9 @@ header {
 
 .thirdliderSection {
   position: relative !important;
-  margin-block: 80px;
+  padding-block: 80px;
+  border-top: 1px solid #00000090;
+  border-bottom: 1px solid #00000090;
 }
 
 .thirdliderSection .shadow {
@@ -357,21 +407,25 @@ header {
 .thirdliderSection .shadow.one {
   left: 0;
   top: 0;
-  background: linear-gradient(to left, 
-  rgba(255, 255, 255, 0) 0%, 
-  rgba(255, 255, 255, 0.4) 30%, 
-  rgba(255, 255, 255, 0.8) 60%, 
-  #ffffff 100%);
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 30%,
+    rgba(255, 255, 255, 0.8) 60%,
+    #ffffff 100%
+  );
 }
 
 .thirdliderSection .shadow.two {
   right: 0;
   top: 0;
-background: linear-gradient(to right, 
-  rgba(255, 255, 255, 0) 0%, 
-  rgba(255, 255, 255, 0.4) 30%, 
-  rgba(255, 255, 255, 0.8) 60%, 
-  #ffffff 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 30%,
+    rgba(255, 255, 255, 0.8) 60%,
+    #ffffff 100%
+  );
 }
 
 .slider_content.third {
@@ -394,7 +448,6 @@ background: linear-gradient(to right,
   text-transform: uppercase;
   font-weight: bold;
 }
-
 
 .thirdliderSection .slick-slide {
   margin-right: 30px;
@@ -426,4 +479,162 @@ background: linear-gradient(to right,
 
 .brandLogo .slick-slide.slick-active.slick-center img {
   opacity: 1;
+}
+
+footer {
+  padding: 50px 100px;
+  background-color: rgb(243, 243, 243);
+}
+
+footer .footerLinks {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-block: 30px;
+}
+
+footer .footerLinks * {
+  color: rgb(18, 18, 18);
+}
+
+footer .footerLinks .link {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .footerLinks .link a {
+  margin-block: 8px;
+  display: block;
+}
+
+.bottom_navbar {
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  opacity: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.bottom_navbar li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.bottom_navbar li a.dark {
+  color: #000;
+}
+
+.bottom_navbar.hide {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.bottom_navbar.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+@media screen and (max-width: 900px) {
+  .silverRingCollection1,
+  .coreRingsCards,
+  .perlRingsCards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .silverRingCollection1::-webkit-scrollbar,
+  .coreRingsCards::-webkit-scrollbar,
+  .perlRingsCards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card .imageContainer {
+    aspect-ratio: 1 / 1;
+  }
+  .shortDescription video {
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  .footerLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .bottom_navbar {
+    overflow: scroll;
+    justify-content: start;
+    padding-inline: 20px;
+  }
+
+  .bottom_navbar::-webkit-scrollbar {
+    display: none;
+  }
+  .bottom_navbar li a {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider-container .brandText {
+    max-width: 350px;
+  }
+
+  .slider_content h2 {
+    font-size: 19px;
+  }
+
+  .slider-container .brandText .slick-prev {
+    left: -25px;
+  }
+  .slider-container .brandText .slick-next {
+    right: -25px;
+  }
+
+  .brandLogo .slick-slide img {
+    width: 90px;
+    height: 20px;
+  }
+
+  .thirdliderSection .slick-slide {
+    margin-right: 5px;
+  }
+
+  .slider_content.third {
+    justify-content: center;
+  }
+
+  .shortDescription h1 {
+    max-width: 390px;
+    margin: 20px auto;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .thirdliderSection .shadow {
+    width: 50px;
+    background: unset !important;
+  }
 }

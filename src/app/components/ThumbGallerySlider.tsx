@@ -35,6 +35,14 @@ function ThumbGallerySlider() {
     slidesToShow: 5,
     swipeToSlide: true,
     focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 768, 
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ]
   };
 
   return (

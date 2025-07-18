@@ -1,0 +1,63 @@
+[
+    {
+        "linkTitle": "ABOUT US",
+        "links": [
+            "About Us",
+            "Hallmarking"
+        ]
+    },
+    {
+        "linkTitle": "LEGAL",
+        "links": [
+            "Terms & Conditions",
+            "Privacy Policy"
+        ]
+    },
+    {
+        "linkTitle": "INFORMATION",
+        "links": [
+            "Delivery",
+            "Returns",
+            "Product Search"
+        ]
+    },
+    {
+        "linkTitle": "CUSTOMER SERVICES",
+        "links": [
+            "Career Guide",
+            "Size Guide",
+            "Student Discount",
+            "Help Center",
+            "Track Your Order"
+        ]
+    },
+    {
+        "linkTitle": "Stock Lists",
+        "links": [
+            "About Us",
+            "Hallmarking"
+        ]
+    },
+    {
+        "linkTitle": "Social Icons",
+        "links": [
+            {
+                "img": "https://www.sergedenimes.com/cdn/shop/t/47/assets/icon-social-facebook.svg?v=178573988855867984481711649814",
+                "link": ""
+            },
+            {
+                "img": "https://www.sergedenimes.com/cdn/shop/t/47/assets/icon-social-instagram.svg?v=88676880584314939711711649815",
+                "link": ""
+            },
+            {
+                "img": "https://www.sergedenimes.com/cdn/shop/t/47/assets/icon-social-twitter.svg?v=175047446385011357401711649816",
+                "link": ""
+            },
+            {
+                "img": "https://www.sergedenimes.com/cdn/shop/t/47/assets/icon-social-tiktok.svg?v=180326524310565084011711649815",
+                "link": ""
+            }
+
+        ]
+    }
+]

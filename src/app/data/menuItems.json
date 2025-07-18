@@ -1,0 +1,43 @@
+[
+    {
+        "title": "Modern Rodeo",
+        "content": ["Shop All", "Rings", "Necklaces", "Bracelets", "Earrings"]
+    },
+    {
+        "title": "New In"
+    },
+    {
+        "title": "Best Sellers"
+    },
+    {
+        "title": "Perl"
+    },
+    {
+        "title": "Shop All",
+        "content": ["Shop All", "Shop All Silver", "Shop All Gold", "Shop Rings", "Shop Bracelets", "Shop Necklaces", "Shop Earings"]
+    },
+    {
+        "title": "Rings",
+        "content": ["All Rings", "Gold Rings", "Silver Rings", "Rings under £80", "Signet Rings", "Stacking Rings", "Statement Rings", "Stone Rings"]
+    },
+    {
+        "title": "Necklaces",
+        "content": ["All Necklaces", "Silver Necklaces", "Gold Necklaces", "Necklaces unser £100", "Necklaces Chains", "Stone Necklaces"]
+    }, 
+    {
+        "title": "Bracelets",
+        "content": ["All Bracelets", "Silver Bracelets", "Gold Bracelets", "Classic Bracelets", "Cuffs"]
+    },
+    {
+        "title": "Earrings",
+        "content": ["All Earrings", "Silver Earrings", "Gold Earrings", "Pendant Earrings", "Hoops", "Studs"]
+    },
+    {
+        "title": "Accessories",
+        "content": ["Shop All"]
+    },
+    {
+        "title": "Collections",
+        "content": ["Nu Historic", "Grunge Romance", "Core"]
+    }
+]
