@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import firstSliders from '@/app/data/firstSlides.json';
+import sliderData from '@/app/data/sliderData.json';
+import CommonSlider from "./CommonSlider";
 
 function ThumbGallerySlider() {
   const sliderRef1 = useRef(null);
@@ -15,8 +16,6 @@ function ThumbGallerySlider() {
     setNav1(sliderRef1.current);
     setNav2(sliderRef2.current);
   }, []);
-
-  const slides = [1, 2, 3, 4, 5, 6];
 
   const mainSliderSettings = {
     asNavFor: nav2,
@@ -32,35 +31,25 @@ function ThumbGallerySlider() {
     asNavFor: nav1,
     ref: sliderRef2,
     centerMode: true,
-    centerPadding: "40px",
-    slidesToShow: 3,
+    centerPadding: "0px",
+    slidesToShow: 5,
     swipeToSlide: true,
     focusOnSelect: true,
   };
 
   return (
     <div className="slider-container">
-      <h2>Slider Syncing (AsNavFor)</h2>
 
-      <h4>First Slider</h4>
-      <Slider {...mainSliderSettings}>
-        {firstSliders.map(({content, detail}) => (
-            <div className="slider_content" key={content}>
+      <Slider {...mainSliderSettings} className="brandText">
+        {sliderData.slider1.map(({detail, content}, index) => (
+            <div className="slider_content" key={index}>
               <h2>&quot;{detail}&quot;</h2>
               <p>{content}</p>
             </div>
         ))}
       </Slider>
 
-      <h4>Second Slider</h4>
-      <Slider {...thumbSliderSettings}>
-        {slides.map((num) => (
-          <div key={num}>
-            <img src="/images/carouselimg.svg" alt={`Thumb ${num}`} />
-            <h3>{num}</h3>
-          </div>
-        ))}
-      </Slider>
+      <CommonSlider settings={thumbSliderSettings} className="brandLogo" sliderData={sliderData} sliderInd={2}/>
     </div>
   );
 }

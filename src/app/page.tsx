@@ -1,6 +1,6 @@
 'use client'
 import CommonBg from "./components/CommonBg";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import useIsMobile from "./hook/UseIsMobile";
 import heroData from '@/app/data/heroData.json'
 import coreCollections from '@/app/data/coreCollection.json'
@@ -8,13 +8,29 @@ import ringsCollection1 from '@/app/data/ringsCollection1.json'
 import perlData from '@/app/data/perlData.json'
 import Cards from "./components/Cards";
 import ThumbGallerySlider from "./components/ThumbGallerySlider";
+import CommonSlider from "./components/CommonSlider";
+import sliderData from '@/app/data/sliderData.json';
+
 export default function Home() {
 
+  const [nav, setNav] = useState(null);
   const isMobile = useIsMobile();
-  useEffect(() => {
-    console.log(ringsCollection1);
+  const sliderRef = useRef(null);
 
-  }, [])
+  const sliderSetting = {
+    asNavFor: nav,
+    ref: sliderRef,
+    centerMode: true,
+    centerPadding: "0px",
+    slidesToShow: 5,
+    swipeToSlide: true,
+    focusOnSelect: true,
+  };
+
+  useEffect(() => {
+      setNav(sliderRef.current);
+    }, []);
+
   return (
     <>
       <main>
@@ -74,6 +90,11 @@ export default function Home() {
         </section>
 
         <ThumbGallerySlider />
+        <section className="thirdliderSection">
+          <div className="shadow one"></div>
+          <CommonSlider settings={sliderSetting} sliderData={sliderData} sliderInd={3} className="thirdSlider"/>
+          <div className="shadow two"></div>
+        </section>
       </main>
     </>
   );

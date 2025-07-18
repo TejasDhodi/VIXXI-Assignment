@@ -1,0 +1,63 @@
+{
+  "slider1": [
+    {
+      "detail": "Serge DeNimes has blended the traditionally clear line between fine jewelry and the fast-paced environment of the trend-dominated fashion industry",
+      "content": "Culted"
+    },
+    {
+      "detail": "The quality never wanes. Continuing to offer 925 silver and high-end, quality jewellery at an alarmingly accessible price point",
+      "content": "Clash"
+    },
+    {
+      "detail": "Dive into a world where fashion meets emotion and every piece is a journey towards self-expression",
+      "content": "Fault"
+    },
+    {
+      "detail": "Serge DeNimes is the trend-centric brand that’s revolutionising the landscape of affordable jewellry",
+      "content": "GQ"
+    },
+    {
+      "detail": "Delivering goods straight out of London, Serge has maintained a strong presence through its frequent themed collections",
+      "content": "Highsnobiety"
+    },
+    {
+      "detail": "London-based jewellery label Serge DeNimes creates animated signet rings every time",
+      "content": "Esquire"
+    }
+  ],
+  "slider2": [
+    "https://www.sergedenimes.com/cdn/shop/files/Logoform-TM_1.svg?v=1696417772&width=600",
+    "https://www.sergedenimes.com/cdn/shop/files/ud5rE97b_400x400_e421dfb4-4dfe-4e39-814c-0e601c729dbd.svg?v=1736887318&width=600",
+    "https://www.sergedenimes.com/cdn/shop/files/LOGO1.svg?v=1736887331&width=600",
+    "https://www.sergedenimes.com/cdn/shop/files/serge-denimes-brand-logo-gq.svg?v=1696349667&width=600",
+    "https://www.sergedenimes.com/cdn/shop/files/LOGO1.svg?v=1736887331&width=600",
+    "https://www.sergedenimes.com/cdn/shop/files/serge-denimes-brand-logo-esquire.svg?v=1696417772&width=600"
+  ],
+  "slider3": [
+    {
+      "img": "https://www.sergedenimes.com/cdn/shop/files/H1.svg?v=1698095447",
+      "title": "Sponsors Mark",
+      "description": "Shows the company that made the product."
+    },
+    {
+      "img": "https://www.sergedenimes.com/cdn/shop/files/H2.svg?v=1698095447",
+      "title": "Fineness Mark",
+      "description": "The product is made from sterling silver."
+    },
+    {
+      "img": "https://www.sergedenimes.com/cdn/shop/files/H3.svg?v=1698095447",
+      "title": "Millesimal Finess Mark",
+      "description": "This shows the purity of the metal."
+    },
+    {
+      "img": "https://www.sergedenimes.com/cdn/shop/files/H6.svg?v=1698664674",
+      "title": "Assay Office Mark",
+      "description": "Mark of the London Assay Office."
+    },
+    {
+      "img": "https://www.sergedenimes.com/cdn/shop/files/H5.svg?v=1698095446",
+      "title": "Year Mark",
+      "description": "The year that the article was marked."
+    }
+  ]
+}
